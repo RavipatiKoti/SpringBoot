@@ -64,3 +64,36 @@ public class HelloWorldController {
 	
 	
 }
+
+
+
+############ How to deploy application using command prompt ##############
+
+1.Let's build the jar file for the spring boot application
+  1.include maven-plugin entry in pom.xml like below
+     <build>
+    <plugins>
+    <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>sprin-boot-maven-plugin</artifactId>
+      <version>2.1.1.RELEASE</version>
+    </plugin>
+    </plugins>
+  </build>
+  and specify <packaging>jar</packaging>
+  
+  and run below maven commands
+  1.mvn clean
+  2.mvn install
+  after successfully ran those commands now we can see that jar file is getting created unders target folder
+  
+  now through command line navigate to target folder and provide below command tou run spring boot application
+  java -jar "application jar name"
+  ex:java -jar helloworld.jar
+  
+  
+  
+  
+  
+  
+  
